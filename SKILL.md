@@ -80,9 +80,12 @@
    - `knowledge-base/frameworks/`：匹配适用的思想框架（心学、内丹、佛教世界观、民间文学规律）
 
 2. **网络补充检索**：
+   - 豆包 Web Search 可用时优先调用 `tools/doubao_web_search.py`（`ARK_API_KEY` 只从环境变量读取）
+   - 豆包不可用或结果不足时回退现有 `web_search`，不阻断管线
    - 搜索该回目的学术论文、书评、名家讲座文字稿
    - 搜索冷知识、新知、跨学科视角
    - 搜索关键词组合：`"西游记 第X回" + 学术/研究/考证/解读`
+   - 豆包返回的模型总结只能作线索，必须核验 URL 对应的原始来源
 
 3. **材料分级**：
    - A级：一手文献（原著原文、清代评点原批、学者论文原文）
@@ -301,6 +304,7 @@ knowledge-base/
 | `style-guide.md` | 刘勃口播稿风格规范 |
 | `forbidden-words.md` | 禁忌词清单（可迭代） |
 | `sub-skills/research.md` | Step 2 学术检索详细 prompt |
+| `tools/doubao_web_search.py` | 可选：火山方舟豆包 Web Search 适配器（读取 ARK_API_KEY） |
 | `sub-skills/planning.md` | Step 3 解读规划详细 prompt |
 | `sub-skills/writing.md` | Step 4 写作详细 prompt |
 | `sub-skills/audit-1-count.md` | Step 5a 一审一校：硬约束计数 |
