@@ -1,0 +1,12 @@
+snapshot_filename	role	version_status
+长文-第X回-篇号-主题.md	article	current
+计数报告-vN.md	evidence	current
+直接引文出现记录.tsv	evidence	current
+范围核验卡.md	evidence	current
+正式底本引文核验卡.md	evidence	current
+正式底本引文核验卡.tsv	evidence	current
+文章设计包.md	research	current
+研究包.md	research	current
+研究性初稿.md	research	current
+完整整合复审报告-vN.md	review	current
+返修清单-vN.md	revision	current
