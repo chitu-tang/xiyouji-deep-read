@@ -1,6 +1,6 @@
-# 《西游记》回目深度长文 Skill RC
+# 《西游记》回目深度长文 Skill
 
-这是可迁移的 RC 发布包。它不包含《西游记》PDF、用户文章、研究资产或任何本机绝对路径。
+当前版本 RC.2.4（2026-10-02 起生产运行）。这是可迁移的发布包，不包含《西游记》PDF、用户文章、研究资产或任何本机绝对路径。发布版文件校验单见 `release-checksums.sha256`；仓库内 `README.md` 与 `RC-VALIDATION.md` 为 GitHub 适配变体，不在校验单对应范围内。
 
 ## 安装
 
@@ -63,4 +63,4 @@ volume	formal_source_path	formal_source_sha256	pdf_page_count	registry_row
 
 - 工作区缺少正式 PDF、哈希不一致、书目信息不完整或注册表与配置不一致时，主控必须进入 `HARD_STOP`。
 - OCR、在线文本和打包示例仅可作导航，不可替代正式底本直接引文核验。
-- 归档必须有外部 `archive-assets.tsv`，其中逐项声明快照文件、角色和版本状态。`create-archive-manifest.sh` 将其哈希和受准资产写入清单，拒绝计划外文件与泛名 `审核报告.md`；复验时快照文件集合必须与清单完全相同。
+- 归档必须有版本化归档资产计划 TSV（如 `revisions/第X回-篇号-主题-vN-归档资产计划.tsv`），逐项声明快照文件、角色和版本状态。`create-archive-manifest.sh` 将其哈希和受准资产写入清单，拒绝计划外文件与泛名 `审核报告.md`；复验时快照文件集合必须与清单完全相同。
